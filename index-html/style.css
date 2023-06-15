@@ -1,0 +1,9 @@
+h1 {
+    color: black;
+    background-color: #83dfe3;
+    border-bottom-style: dashed;
+    text-shadow: 2px 2px 6px aqua;
+}
+h2 {
+    background: linear-gradient(to left,white, #ffbf0091);
+}

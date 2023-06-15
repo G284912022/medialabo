@@ -1,3 +1,15 @@
 li {
     color: navy;
 }
+ul.target {
+    border: 3px solid #69d039;
+    padding: 10px 0 20px 20px;
+    margin: 30px;
+    width: 125px;
+    height: 215px;
+}
+ul.main {
+    font-size: 50px;
+    border: dashed blue;
+    padding: 10px 0 0 0;
+}
