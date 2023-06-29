@@ -16,7 +16,7 @@ let data = [
 // 練習4-2 メッセージ追加プログラム
 let h2 = document.querySelector('h2#ex42');	
 let p = document.createElement('p');
-p.style.text-emphasis='sesame green';
+p.style.textemphasis='sesame green';
 h2.insertAdjacentElement('afterend', p);
 // 練習4-3 写真表作成プログラム
 
