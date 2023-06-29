@@ -40,8 +40,7 @@ let div = document.querySelector('div#sarukani');		// div#sarukani 要素を検�
 
 let beeLink = document.createElement('a');			// 新しい a要素を作成
 beeLink.textContent = 'ハチ';						// a要素のテキストを設定
-beeLink.setAttribute('href', 'https://ja.wikipedia.org/wiki/ハチ');
-													// a要素の src属性を設定
+beeLink.setAttribute('href', 'https://ja.wikipedia.org/wiki/ハチ');	// a要素の src属性を設定
 
 div.insertAdjacentElement('beforeend', beeLink);	// a要素を div要素の中の最後に追加
 
