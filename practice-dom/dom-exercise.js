@@ -24,19 +24,19 @@ let div = document.querySelector('div#phototable');
 	
 let img = document.createElement('img');
 img.setAttribute('src','taro.png');
-let p1 = document.createElement('p1');
+let p1 = document.createElement('p');
 p1.insertAdjacentElement('beforeend',img);
 div.insertAdjacentElement('beforeend',p1);
 
 let img1 = document.createElement('img');
 img1.setAttribute('src','jiro.png');
-let p2 = document.createElement('p2');
+let p2 = document.createElement('p');
 p2.insertAdjacentElement('beforeend',img1);
 div.insertAdjacentElement('beforeend',p2);
 
 let img2 = document.createElement('img');
 img2.setAttribute('src','hanako.png');
-let p3 = document.createElement('p3');
+let p3 = document.createElement('p');
 p3.insertAdjacentElement('beforeend',img2);
 div.insertAdjacentElement('beforeend',p3);
 
