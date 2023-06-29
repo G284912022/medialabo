@@ -15,9 +15,11 @@ hantei();
 
 //ボタンを押した後
 function hantei() {
-    let yoso = 4;
+    let kaisu = document.createElement('span#kaisu');
+    let yoso = document.createElement('span#answer');
+    yoso.textContent = '4';
+    kaisu.textContent = 1;
     kaisu++;
-    console.log(kaisu + "回目の予想: " + yoso);
     if(yoso === kotae) {
         if(kaisu >= 4) {
             console.log("答えは" + kotae + "でした。すでにゲームは終わっています");
