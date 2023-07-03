@@ -3,7 +3,8 @@ let kotae = Math.floor(Math.random()*10) + 1;
 console.log("答え(デバッグ用): " + kotae);
 
 //入力回数
-let kaisu = 1;
+let kaisu = document.querySelector('span#kaisu');
+kaisu = 1;
 
 //予想を4回
 //将来以下の呼び出しを削除する
@@ -15,26 +16,27 @@ hantei();
 
 //ボタンを押した後
 function hantei() {
-    let kaisu = document.createElement('span#kaisu');
-    let yoso = document.createElement('span#answer');
-    yoso.textContent = '4';
-    kaisu.textContent = 1;
-    kaisu++;
+    kaisu.textContent = console.log(kaisu);
+    let yoso = document.querySelector('span#answer');
+    yoso.textContent = 4;
+    let kekka = document.querySelector('p#result');
     if(yoso === kotae) {
         if(kaisu >= 4) {
-            console.log("答えは" + kotae + "でした。すでにゲームは終わっています");
+            kekka.textContent = ("答えは" + kotae + "でした。すでにゲームは終わっています");
         } else {
-            console.log("正解です。おめでとう！");
+            kekka.textContent = ("正解です。おめでとう！");
         }
     } else {
         if(kaisu === 3) {
-            console.log("まちがい、残念でした答えは" + kotae + "です。");
+            kekka.textContent = ("まちがい、残念でした答えは" + kotae + "です。");
         } else if(kaisu >=4) {
-            console.log("答えは" + kotae + "でした。すでにゲームは終わっています");
+            kekka.textContent = ("答えは" + kotae + "でした。すでにゲームは終わっています");
         } else if(kotae > yoso) {
-            console.log("まちがい、答えはもっと大きいですよ");
+            kekka.textContent = ("まちがい、答えはもっと大きいですよ");
         } else {
-        console.log("まちがい、答えはもっと小さいですよ");
+            kekka.textContent = ("まちがい、答えはもっと小さいですよ");
+            kaisu.textContent += 1;
         }
     }
+    kaisu++;
 }
