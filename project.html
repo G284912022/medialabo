@@ -8,18 +8,23 @@
   </head>
   <body>
     <ul class="main">
-        <p>世界の天気</p>
+        <p><label for="kunimei">調べたい国:</label>
+        <select name="kunimei" id="kunimei">
+          <option value="">調べたい国を選んでください</option>
+          <option value="pekin">北京市</option>
+          </select>
+        <button id="kensaku">検索結果</button></p>
     </ul>
     <ul class="target">
-        <li>緯度:116.3972</li>
-        <li>経度:39.9075</li>
-        <li>天気:曇りがち</li>
-        <li>最低気温:9.94</li>
-        <li>最高気温:9.94</li>
-        <li>湿度:14</li>
-        <li>風速:2.65</li>
-        <li>風向:197</li>
-        <li>都市名:北京市</li>
+        <li id="ido"></li>
+        <li id="keido"></li>
+        <li id="tenki"></li>
+        <li id="saitei"></li>
+        <li id="saikou"></li>
+        <li id="sitsudo"></li>
+        <li id="fuusoku"></li>
+        <li id="fuukou"></li>
+        <li id="toshi"></li>
     </ul>
     <div id="result"></div>
   </body>
