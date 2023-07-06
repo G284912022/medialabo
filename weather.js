@@ -50,6 +50,7 @@ let a = document.querySelector('button#kensaku');
 a.addEventListener('click', kensaku);
 
 function kensaku(){
+  console.log(data.name);
   let ido = document.querySelector('li#ido');
   ido.textContent = ("緯度は"+data.coord.lon);
   console.log("緯度は"+data.coord.lon);
