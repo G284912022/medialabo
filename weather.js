@@ -48,9 +48,57 @@ let data = {
 ////////// 課題3-2 ここからプログラムを書こう
 let a = document.querySelector('button#kensaku');
 a.addEventListener('click', kensaku);
-
+var select = document.getElementById("kunimei");
+select.options[0].selected = true;
 function kensaku(){
-  console.log(data.name);
+  let url;
+  let s = document.querySelector('select#kunimei');
+  let idx = s.selectedIndex;
+  if(idx === 1) {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/360630.json';
+  }
+  if(idx === 2) {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/524901.json';
+  }
+  if(idx === 3) {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/993800.json';
+  }
+  if(idx === 4) {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/1816670.json';
+  }
+  if(idx === 5) {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/1850147.json';
+  }
+  if(idx === 6) {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/1880252.json';
+  }
+  if(idx === 7) {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/2147714.json';
+  }
+  if(idx === 8) {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/2643743.json';
+  }
+  if(idx === 9) {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/2968815.json';
+  }
+  if(idx === 10) {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/3451189.json';
+  }
+  if(idx === 11) {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/5128581.json';
+  }
+  if(idx === 12) {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/5368361.json';
+  }
+  //通信
+  axios.get(url).then(showResult).catch(showError).then(finish);
+}
+
+function showResult(resp) {
+  let data = resp.data;
+  if(typeof data === 'string') {
+    data = JSON.parse(data);
+  }
   let ido = document.querySelector('li#ido');
   ido.textContent = ("緯度は"+data.coord.lon);
   console.log("緯度は"+data.coord.lon);
@@ -80,4 +128,13 @@ function kensaku(){
   let toshi = document.querySelector('li#toshi');
   toshi.textContent = ("都市名は"+data.name);
   console.log("都市名は"+data.name);
+}
+
+function showError(err) {
+  console.log(err);
+  console.log('通信ミス');
+}
+
+function finish() {
+  console.log('Ajax通信が終わりました');
 }

@@ -3,15 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>検索結果</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.0/axios.min.js"></script>
     <link rel="stylesheet" href="project.css">
     <script src="weather.js" defer></script>
   </head>
   <body>
+    <h1>世界の天気</h1>
     <ul class="main">
         <p><label for="kunimei">調べたい国:</label>
         <select name="kunimei" id="kunimei">
           <option value="">調べたい国を選んでください</option>
-          <option value="pekin">北京市</option>
+          <option value="cairo">カイロ</option>
+          <option value="moscow">モスクワ</option>
+          <option value="johannes">ヨハネスブルク</option>
+          <option value="beijing">北京</option>
+          <option value="tokyo">東京</option>
+          <option value="singapore">シンガポール</option>
+          <option value="sydney">シドニー</option>
+          <option value="london">ロンドン</option>
+          <option value="paris">パリ</option>
+          <option value="rio">リオデジャネイロ</option>
+          <option value="newyork">ニューヨーク</option>
+          <option value="los">ロサンゼルス</option>
           </select>
         <button id="kensaku">検索結果</button></p>
     </ul>
